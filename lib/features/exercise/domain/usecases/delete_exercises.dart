@@ -2,7 +2,7 @@
 import 'package:dartz/dartz.dart';
 import '../entities/exercise_entity.dart';
 import '../repositories/exercise_repository.dart';
-import '../../../../core/error/failure.dart';
+import '../../../../core/error/failures.dart';
 
 class DeleteExercises {
   final ExerciseRepository repository;
