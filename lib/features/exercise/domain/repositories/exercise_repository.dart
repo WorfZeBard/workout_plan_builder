@@ -1,7 +1,7 @@
 // lib/features/exercise/domain/repositories/exercise_repository.dart
 import 'package:dartz/dartz.dart';
 import '../entities/exercise_entity.dart';
-import '../../../../core/error/failure.dart';
+import '../../../../core/error/failures.dart';
 
 abstract class ExerciseRepository {
   Future<Either<Failure, List<ExerciseEntity>>> getExercises();
