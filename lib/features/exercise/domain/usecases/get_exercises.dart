@@ -2,7 +2,7 @@
 import 'package:dartz/dartz.dart';
 import '../entities/exercise_entity.dart';
 import '../repositories/exercise_repository.dart';
-import '../../../user/domain/failures/failure.dart';
+import '../../../../core/failures/failure.dart';
 
 class GetExercises {
   final ExerciseRepository repository;
