@@ -2,7 +2,7 @@
 import 'package:dartz/dartz.dart';
 import '../entities/user_entity.dart';
 import '../repositories/user_repository.dart';
-import '../failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
 class GetCurrentUser {
   final UserRepository repository;

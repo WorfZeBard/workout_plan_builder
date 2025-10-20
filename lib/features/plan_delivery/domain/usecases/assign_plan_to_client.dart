@@ -1,5 +1,5 @@
 // assign_plan_to_client.dart
-import '../../../../core/failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
 class AssignClientWorkoutPlan {
   final WorkoutDeliveryRepository repository;

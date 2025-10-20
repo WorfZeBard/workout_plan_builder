@@ -1,5 +1,5 @@
 // remove_assigned_plan.dart
-import '../../../../core/failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
 class RemoveClientWorkoutPlan {
   final WorkoutDeliveryRepository repository;

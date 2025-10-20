@@ -1,7 +1,7 @@
 // lib/features/user/domain/repositories/user_repository.dart
 import 'package:dartz/dartz.dart';
 import '../entities/user_entity.dart';
-import '../../../../core/failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
 abstract class UserRepository {
   Future<Either<Failure, UserEntity>> registerUser({

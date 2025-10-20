@@ -1,7 +1,7 @@
 // lib/features/workout_plan/domain/entities/workout_plan_entity.dart
 import 'package:equatable/equatable.dart';
 import '../../../exercise/domain/entities/exercise_entity.dart';
-import '../../../../core/failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
 class WorkoutPlanEntity extends Equatable {
   final String id;
