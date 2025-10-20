@@ -1,7 +1,7 @@
 // lib/features/plan_delivery/domain/repositories/plan_delivery_repository.dart
 import 'package:dartz/dartz.dart';
 import '../entities/assigned_plan_entity.dart';
-import '../../../../core/failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
 abstract class PlanDeliveryRepository {
   Future<Either<Failure, void>> assignPlanToClient({

@@ -1,5 +1,5 @@
 // create_workout_plan.dart
-import '../../../../core/failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
 class CreateWorkoutPlan {
   final WorkoutPlanRepository repository;
