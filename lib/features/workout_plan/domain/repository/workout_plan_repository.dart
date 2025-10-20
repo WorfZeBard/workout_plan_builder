@@ -2,6 +2,7 @@
 import 'package:dartz/dartz.dart';
 import '../entities/workout_plan_entity.dart';
 import '../../../user/domain/failures/failure.dart';
+import '../../../../core/failures/failure.dart';
 
 abstract class WorkoutPlanRepository {
   Future<Either<Failure, void>> createWorkoutPlan(WorkoutPlanEntity plan);
