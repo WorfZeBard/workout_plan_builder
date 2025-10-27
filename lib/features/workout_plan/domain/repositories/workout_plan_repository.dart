@@ -14,19 +14,4 @@ abstract class WorkoutPlanRepository {
       String userId);
 }
 
-@override
-Future<Either<Failure, WorkoutPlanEntity>> createWorkoutPlan(
-    WorkoutPlanEntity plan) async {
-  try {
-    final model = WorkoutPlanModel(
-      id: plan.id,
-      name: plan.name,
-      description: plan.description,
-      days: plan.days,
-    );
-    await remoteDataSource.createWorkoutPlan(model);
-    return Right(plan); // return the entity, not null
-  } catch (e) {
-    return Left(ServerFailure(e.toString()));
-  }
-}
+
