@@ -1,4 +1,3 @@
-// lib/features/progress/domain/entities/progress_entity.dart
 import 'package:equatable/equatable.dart';
 
 class ProgressEntity extends Equatable {
@@ -11,6 +10,13 @@ class ProgressEntity extends Equatable {
   final int? totalReps;
   final double? totalWeight;
 
+  // Aggregated progress tracking
+  final String? id; // optional summary identifier
+  final int? completedSessions;
+  final int? totalSessions;
+  final double? progressPercentage;
+  final DateTime? lastUpdated;
+
   const ProgressEntity({
     required this.progressId,
     required this.clientId,
@@ -20,6 +26,11 @@ class ProgressEntity extends Equatable {
     this.totalSets,
     this.totalReps,
     this.totalWeight,
+    this.id,
+    this.completedSessions,
+    this.totalSessions,
+    this.progressPercentage,
+    this.lastUpdated,
   });
 
   @override
@@ -32,5 +43,10 @@ class ProgressEntity extends Equatable {
         totalSets,
         totalReps,
         totalWeight,
+        id,
+        completedSessions,
+        totalSessions,
+        progressPercentage,
+        lastUpdated,
       ];
 }

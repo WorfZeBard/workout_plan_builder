@@ -1,11 +1,14 @@
-// get_client_workout_plan.dart
+import 'package:dartz/dartz.dart';
 import '../../../../core/error/failures.dart';
+import '../entities/assigned_plan_entity.dart';
+import '../repositories/plan_delivery_repository.dart';
 
-class GetClientWorkoutPlan {
-  final WorkoutDeliveryRepository repository;
-  GetClientWorkoutPlan(this.repository);
+class GetClientAssignedPlansUseCase {
+  final PlanDeliveryRepository repository;
 
-  Future<Either<Failure, WorkoutPlanEntity>> call(String clientId) {
-    return repository.getClientWorkoutPlan(clientId);
+  GetClientAssignedPlansUseCase(this.repository);
+
+  Future<Either<Failure, List<AssignedPlanEntity>>> call(String clientId) {
+    return repository.getClientAssignedPlans(clientId);
   }
 }

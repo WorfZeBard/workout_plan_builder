@@ -1,14 +1,13 @@
-// add_exercises.dart
 import 'package:dartz/dartz.dart';
 import '../entities/exercise_entity.dart';
 import '../repositories/exercise_repository.dart';
 import '../../../../core/error/failures.dart';
 
-class AddExercises {
+class AddExercise {
   final ExerciseRepository repository;
-  AddExercises(this.repository);
+  AddExercise(this.repository);
 
-  Future<Either<Failure, List<ExerciseEntity>>> call() async {
-    return await repository.addExercises();
+  Future<Either<Failure, void>> call(ExerciseEntity exercise) async {
+    return await repository.addExercise(exercise);
   }
 }

@@ -1,4 +1,4 @@
-name: fitness_trainer_app
+name: workout_plan_builder
 description: A Flutter app for fitness trainers and clients with workout plan builder.
 publish_to: 'none' # Remove this line if you plan to publish to pub.dev
 version: 1.0.0+1

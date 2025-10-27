@@ -10,6 +10,7 @@ abstract class PlanDeliveryRepository {
     required String planId,
   });
 
-  Future<Either<Failure, List<AssignedPlanEntity>>> getClientAssignedPlans(String clientId);
+  Future<Either<Failure, List<AssignedPlanEntity>>> getClientAssignedPlans(
+      String clientId);
   Future<Either<Failure, void>> removeAssignedPlan(String assignmentId);
 }
