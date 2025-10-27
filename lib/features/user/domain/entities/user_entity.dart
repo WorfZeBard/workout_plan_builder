@@ -1,7 +1,10 @@
 // lib/features/user/domain/entities/user_entity.dart
 import 'package:equatable/equatable.dart';
 
-enum UserRole { trainer, client }
+enum UserRole {
+  trainer,
+  client,
+}
 
 class UserEntity extends Equatable {
   final String uid; // Firebase UID

@@ -1,16 +1,15 @@
-// lib/features/plan_delivery/domain/entities/assigned_plan_entity.dart
+// domain/entities/assigned_plan_entity.dart
 import 'package:equatable/equatable.dart';
-import '../../../workout_plan/domain/entities/workout_plan_entity.dart';
 
-class AssignedPlanEntity extends Equatable {
-  final String assignmentId;
+class AssignedWorkoutEntity extends Equatable {
+  final String id;
   final String trainerId;
   final String clientId;
-  final WorkoutPlanEntity plan;
+  final Map<String, dynamic> plan;
   final DateTime assignedDate;
 
-  const AssignedPlanEntity({
-    required this.assignmentId,
+  const AssignedWorkoutEntity({
+    required this.id,
     required this.trainerId,
     required this.clientId,
     required this.plan,
@@ -18,5 +17,5 @@ class AssignedPlanEntity extends Equatable {
   });
 
   @override
-  List<Object?> get props => [assignmentId, trainerId, clientId, plan, assignedDate];
+  List<Object?> get props => [id, trainerId, clientId, plan, assignedDate];
 }

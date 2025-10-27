@@ -1,14 +1,12 @@
-// delete_exercises.dart
 import 'package:dartz/dartz.dart';
-import '../entities/exercise_entity.dart';
 import '../repositories/exercise_repository.dart';
-import '../../../../core/failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
-class DeleteExercises {
+class DeleteExercise {
   final ExerciseRepository repository;
-  DeleteExercises(this.repository);
+  DeleteExercise(this.repository);
 
-  Future<Either<Failure, List<ExerciseEntity>>> call() async {
-    return await repository.deleteExercises();
+  Future<Either<Failure, void>> call(String exerciseId) async {
+    return await repository.deleteExercise(exerciseId);
   }
 }

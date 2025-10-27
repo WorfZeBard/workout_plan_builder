@@ -1,7 +1,7 @@
 // lib/features/user/domain/usecases/logout_user.dart
 import 'package:dartz/dartz.dart';
 import '../repositories/user_repository.dart';
-import '../../../../core/failures/failure.dart';
+import '../../../../core/error/failures.dart';
 
 class LogoutUser {
   final UserRepository repository;

@@ -1,21 +1,20 @@
-// lib/features/exercise/domain/entities/exercise_entity.dart
 import 'package:equatable/equatable.dart';
 
 class ExerciseEntity extends Equatable {
   final String id;
   final String name;
   final String description;
-  final String? imageUrl;
-  final String? targetMuscle;
+  final String imageUrl;
+  final String category;
 
   const ExerciseEntity({
     required this.id,
     required this.name,
     required this.description,
-    this.imageUrl,
-    this.targetMuscle,
+    required this.imageUrl,
+    required this.category,
   });
 
   @override
-  List<Object?> get props => [id, name, description, imageUrl, targetMuscle];
+  List<Object?> get props => [id, name, description, imageUrl, category];
 }
