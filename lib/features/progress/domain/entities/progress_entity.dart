@@ -1,52 +1,29 @@
 import 'package:equatable/equatable.dart';
 
 class ProgressEntity extends Equatable {
-  final String progressId;
+  final String id;
   final String clientId;
-  final String planId;
+  final String workoutId;
   final DateTime date;
-  final bool completed;
-  final int? totalSets;
-  final int? totalReps;
-  final double? totalWeight;
-
-  // Aggregated progress tracking
-  final String? id; // optional summary identifier
-  final int? completedSessions;
-  final int? totalSessions;
-  final double? progressPercentage;
-  final DateTime? lastUpdated;
+  final int completedSets;
+  final int completedReps;
 
   const ProgressEntity({
-    required this.progressId,
+    required this.id,
     required this.clientId,
-    required this.planId,
+    required this.workoutId,
     required this.date,
-    required this.completed,
-    this.totalSets,
-    this.totalReps,
-    this.totalWeight,
-    this.id,
-    this.completedSessions,
-    this.totalSessions,
-    this.progressPercentage,
-    this.lastUpdated,
+    required this.completedSets,
+    required this.completedReps,
   });
 
   @override
-  List<Object?> get props => [
-        progressId,
-        clientId,
-        planId,
-        date,
-        completed,
-        totalSets,
-        totalReps,
-        totalWeight,
+  List<Object> get props => [
         id,
-        completedSessions,
-        totalSessions,
-        progressPercentage,
-        lastUpdated,
+        clientId,
+        workoutId,
+        date,
+        completedSets,
+        completedReps,
       ];
 }

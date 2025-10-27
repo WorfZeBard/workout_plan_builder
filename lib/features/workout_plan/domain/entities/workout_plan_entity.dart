@@ -3,22 +3,20 @@ import 'package:equatable/equatable.dart';
 
 class WorkoutPlanEntity extends Equatable {
   final String id;
-  final String title;
+  final String name;
   final String description;
-  final List<String> exercises; // could be exercise IDs
-  final String createdBy; // user id
-  final DateTime createdAt;
+  final List<String> days;
+  final String trainerId;
 
   const WorkoutPlanEntity({
     required this.id,
-    required this.title,
+    required this.name,
     required this.description,
-    required this.exercises,
-    required this.createdBy,
-    required this.createdAt,
+    required this.days,
+    required this.trainerId,
   });
 
   @override
   List<Object?> get props =>
-      [id, title, description, exercises, createdBy, createdAt];
+      [id, description];
 }

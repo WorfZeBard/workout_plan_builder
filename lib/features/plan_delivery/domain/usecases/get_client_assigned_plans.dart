@@ -4,11 +4,11 @@ import '../entities/assigned_plan_entity.dart';
 import '../repositories/plan_delivery_repository.dart';
 
 class GetClientAssignedPlansUseCase {
-  final PlanDeliveryRepository repository;
+  final WorkoutDeliveryRepository repository;
 
   GetClientAssignedPlansUseCase(this.repository);
 
-  Future<Either<Failure, List<AssignedPlanEntity>>> call(String clientId) {
-    return repository.getClientAssignedPlans(clientId);
+  Future<Either<Failure, List<AssignedWorkoutEntity>>> call(String clientId) {
+    return repository.getClientAssignedWorkouts(clientId);
   }
 }

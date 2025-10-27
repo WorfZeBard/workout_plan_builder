@@ -1,16 +1,17 @@
 // lib/features/plan_delivery/domain/repositories/plan_delivery_repository.dart
 import 'package:dartz/dartz.dart';
-import '../entities/assigned_plan_entity.dart';
 import '../../../../core/error/failures.dart';
+import '../entities/assigned_plan_entity.dart'; // ✅ Keep this import
 
-abstract class PlanDeliveryRepository {
-  Future<Either<Failure, void>> assignPlanToClient({
-    required String trainerId,
-    required String clientId,
-    required String planId,
-  });
+abstract class WorkoutDeliveryRepository {
+  Future<Either<Failure, void>> assignPlanToClient(
+    String trainerId,
+    String clientId,
+    String planId,
+  );
 
-  Future<Either<Failure, List<AssignedPlanEntity>>> getClientAssignedPlans(
-      String clientId);
-  Future<Either<Failure, void>> removeAssignedPlan(String assignmentId);
+  Future<Either<Failure, List<AssignedWorkoutEntity>>>
+      getClientAssignedWorkouts(
+    String clientId,
+  );
 }
